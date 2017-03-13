@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "finaut";
+  src:url("fonts/finaut.eot");
+  src:url("fonts/finaut.eot?#iefix") format("embedded-opentype"),
+    url("fonts/finaut.woff") format("woff"),
+    url("fonts/finaut.ttf") format("truetype"),
+    url("fonts/finaut.svg#finaut") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="finaut-icon-"]:before,
+[class*=" finaut-icon-"]:before {
+  font-family: "finaut" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.finaut-icon-menu:before {
+  content: "\67";
+}
+.finaut-icon-plus:before {
+  content: "\68";
+}
+.finaut-icon-search-large:before {
+  content: "\69";
+}
+.finaut-icon-search:before {
+  content: "\6a";
+}
+.finaut-icon-user:before {
+  content: "\6b";
+}
+.finaut-icon-arrow-right-large:before {
+  content: "\61";
+}
+.finaut-icon-arrow-left-large:before {
+  content: "\61";
+  transform: rotate(180deg)
+}
+.finaut-icon-arrow-up-large:before {
+  content: "\61";
+  transform: rotate(-90deg)
+}
+.finaut-icon-arrow-down-large:before {
+  content: "\61";
+  transform: rotate(90deg)
+}
+.finaut-icon-arrow-right:before {
+  content: "\64";
+}
+.finaut-icon-arrow-left:before {
+  content: "\64";
+  transform: rotate(180deg)
+}
+.finaut-icon-arrow-up:before {
+  content: "\64";
+  transform: rotate(-90deg)
+}
+.finaut-icon-arrow-down:before {
+  content: "\64";
+  transform: rotate(90deg)
+}

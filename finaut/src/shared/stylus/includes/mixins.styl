@@ -1,0 +1,70 @@
+-section-width =
+  width 85%
+  margin 0 auto
+  max-width (960/16)rem
+  @media (max-width: $max-smartphone-height)
+    width "calc(100% - %s)" % (30/16)rem
+
+-section-padding =
+  padding-top (80/16)rem
+  padding-bottom (100/16)rem
+
+-section-padding-small =
+  padding-top (35/16)rem
+  padding-bottom (55/16)rem
+
+-section-heading =
+  font-size (45/16)rem
+  line-height (50/16)rem
+  font-weight 300
+  text-align center
+  margin 0
+  @media (max-width: $max-smartphone-height)
+    font-size (32/16)rem
+    line-height (40/16)rem
+
+-section-subheading =
+  font-size (12/16)rem
+  font-weight 700
+  text-transform uppercase
+  margin 0
+
+-section-grid =
+  display flex
+  flex-direction row
+  justify-content space-between
+  align-content flex-start
+
+-font-regular =
+  font-size (14/16)rem
+  line-height (20/16)rem
+  font-family 'Lato', sans-serif
+  font-weight normal
+
+-button =
+  box-sizing border-box
+  display inline-block
+  text-decoration none
+  text-transform uppercase
+  color $color-black
+  background $color-gray
+  padding (15/16)rem (50/16)rem
+  line-height (30/16)rem
+  font-size (12/16)rem
+  font-weight 700
+
+-hover-transform($color)
+  transition-duration 0.3s
+  &:hover
+    color $color
+
+-keep-ratio($n)
+  position relative
+  &:before
+    content ''
+    display block
+    width 100%
+    padding-top (1/$n*100)%
+
+-gradient($startPoint, $startColor, $startInterval, $endColor, $endInterval)
+	background-image linear-gradient($startPoint, $startColor $startInterval, $endColor $endInterval)

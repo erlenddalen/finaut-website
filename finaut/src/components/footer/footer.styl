@@ -1,0 +1,146 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.footer
+  {-section-width}
+  {-section-padding-small}
+  &-wrapper
+    background $color-black
+    color $color-white
+  &-grid
+    {-section-grid}
+  &-contacts
+    width 50%
+    box-sizing border-box
+    padding-right 5%
+    &-heading
+      {-section-subheading}
+      margin-bottom (55/16)rem
+      padding-bottom (30/16)rem
+      position relative
+      line-height (20/16)rem
+      &:after
+        content ''
+        position absolute
+        left 0
+        bottom 0
+        width (45/16)rem
+        border-bottom 2px $color-primary solid
+    &-grid
+      {-section-grid}
+      &-item
+        margin-bottom (40/16)rem
+        &-heading
+          {-section-subheading}
+          margin-bottom (20/16)rem
+        &-text
+          line-height (20/16)rem
+          a
+            color inherit
+            text-decoration none
+
+  &-newsletter
+    width 50%
+    margin-top (105/16)rem
+    &-heading
+      {-section-subheading}
+      margin-bottom (20/16)rem
+    &-form
+      position relative
+      padding-right (10/16)rem
+    &-field
+      display block
+      width 100%
+      box-sizing border-box
+      border none
+      padding (25/16)rem (170/16)rem (25/16)rem (30/16)rem
+      line-height (20/16)rem
+      background alpha($color-dark-gray, 0.12)
+      color $color-white
+      outline none
+    &-button
+      {-button}
+      border none
+      outline none
+      background $color-primary
+      color $color-white
+      position absolute
+      top (10/16)rem
+      right (0/16)rem
+      height (70/16)rem
+  &-footer
+    margin-top (90/16)rem
+    color $color-white-semi
+    font-size (14/16)rem
+    a
+      color inherit
+      text-decoration none
+      transition-duration 0.3s
+      &:hover
+        color $color-white
+  &-social
+    &-icon
+      display inline-block
+      margin 0 (15/16)rem
+      transform rotate(45deg)
+      width (40/16)rem
+      height @width
+      line-height @height
+      text-align center
+      color $color-white-semi !important
+      border $color-white-semi 2px solid
+      transition-duration 0.3s
+      &:hover
+        border-color $color-white
+        color $color-white !important
+      i
+        display block
+        transform rotate(-45deg)
+        color inherit
+
+@media (max-width: $max-tablet-width)
+  .footer
+    //
+
+@media (max-width: $max-smartphone-height)
+  .footer
+    &-grid
+      flex-direction column
+      margin-top (20/16)rem
+
+    &-contacts
+      width 100%
+      padding-right 0
+      &-grid
+        &-item
+          &-text
+            font-size (13/16)rem
+    &-social
+      &-icon
+        width (25/16)rem
+        height @width
+        line-height @height
+        margin 0 (10/16)rem
+        i
+          font-size (14/16)rem
+    &-newsletter
+      width 100%
+      margin-top (20/16)rem
+      &-form
+        padding-right 0
+      &-field
+        padding (25/16)rem (30/16)rem
+        margin-bottom (20/16)rem
+      &-button
+        display block
+        position static
+        width 100%
+    &-footer
+      text-align center
+      font-size (12/16)rem
+      line-height (16/16)rem
+
+
+@media (max-width: $max-smartphone-width)
+  .footer
+    //

@@ -1,0 +1,106 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.search
+  &-form
+    {-section-width}
+    padding-top (60/16)rem
+    padding-bottom (135/16)rem
+    position relative
+    &-wrapper
+      background $color-gray
+    &-heading
+      {-section-subheading}
+      margin-bottom (20/16)rem
+    &-field
+      {-section-heading}
+      text-align left
+      background none
+      border none
+      width 100%
+      box-sizing border-box
+      outline none
+    &:after
+      content ''
+      display block
+      position absolute
+      left 0
+      bottom (65/16)rem
+      width (80/16)rem
+      border-bottom 2px $color-primary solid
+
+  &-results
+    {-section-width}
+    {-section-padding}
+    &-wrapper
+      //
+    &-heading
+      {-section-subheading}
+      margin-bottom (55/16)rem
+    &-list
+      list-style none
+      padding-bottom (60/16)rem
+      margin 0
+      padding 0
+    &-item
+      position relative
+    &-link
+      display block
+      color inherit
+      text-decoration none
+      display flex
+      flex-direction row
+      justify-content space-between
+      align-items flex-start
+      flex-wrap no-wrap
+    &-number
+      position absolute
+      color $color-primary
+      width (50/16)rem
+      height 100%
+      padding (30/16)rem 0
+      box-sizing border-box
+      &:after
+        content ''
+        display block
+        position absolute
+        left 0
+        right 0
+        bottom 0
+        border-bottom 2px $color-primary solid
+    &-text
+      margin-left (100/16)rem
+      padding (30/16)rem (60/16)rem (30/16)rem (0/16)rem
+      border-bottom $color-dark-gray 2px solid
+      width 100%
+    &-date
+      {-section-subheading}
+      margin-top (25/16)rem
+    &-icon
+      position absolute
+      right (30/16)rem
+      top 50%
+      transform translate(0,-50%)
+      transition-duration 0.3s
+      ../:hover &
+        color $color-primary
+
+@media (max-width: $max-tablet-width)
+  .search
+    //
+
+@media (max-width: $max-smartphone-height)
+  .search
+    &-results
+      &-number
+        // font-size (14/16)rem
+        width (40/16)rem
+      &-text
+        margin-left (60/16)rem
+        padding-right 0
+      &-icon
+        display none !important
+
+@media (max-width: $max-smartphone-width)
+  .search
+    //

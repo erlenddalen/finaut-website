@@ -1,0 +1,174 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.process
+  {-section-width}
+  {-section-padding}
+  &-wrapper
+    background $color-white
+    color $color-black
+  &-heading
+    {-section-heading}
+    margin-bottom (60/16)rem
+  &-navigation
+    list-style none
+    text-align center
+    margin 0 0 (65/16)rem 0
+    padding 0
+    &-item
+      display inline-block
+    &-link
+      {-section-subheading}
+      {-hover-transform($color-primary)}
+      display block
+      text-decoration none
+      color $color-black
+      padding (5/16)rem (15/16)rem
+      line-height (20/16)rem
+      &-active
+        color $color-primary
+    &-icon
+      display none !important
+  &-timeline
+    {-section-grid}
+    height (150/16)rem
+    line-height @height
+    &-wrapper
+      display block
+      width 100%
+      background $color-primary
+      margin-bottom (50/16)rem
+      color $color-white
+      {-gradient(to right, $color-primary, 50%, #863753, 100%)}
+    &-arrow
+      &-left
+      &-right
+        display none
+    &-item
+      {-section-subheading}
+      display block
+      min-width 20%
+      text-align center
+  &-grid
+    {-section-grid}
+    margin-bottom (60/16)rem
+    &-item
+      margin 0 (20/16)rem
+      position relative
+      &:after
+        content ''
+        position absolute
+        left (25/16)rem
+        bottom 2px
+        right (0/16)rem
+        border-bottom 2px $color-primary solid
+      &-intro
+        {-font-regular}
+        margin-bottom (40/16)rem
+      &-footer
+        color $color-primary
+        font-weight 700
+        font-size (12/16)rem
+
+  &-footer
+    text-align center
+    &-button
+      {-button}
+      &-icon
+        color $color-primary
+        padding-left (5/16)rem
+
+@media (max-width: $max-tablet-width)
+  .process
+    //
+
+@media (max-width: $max-smartphone-height)
+  .process
+    &-navigation
+      max-height (60/16)rem
+      overflow hidden
+      transition-duration 0.3s
+      border $color-dark-gray 1px solid
+      position relative
+      &-expanded
+        max-height (1000/16)rem
+      &-item
+        display block
+        width 100%
+        text-align left
+        padding-left 0
+      &-link
+        {-button}
+        background $color-white
+        display none
+        padding-left (20/16)rem
+        padding-right @padding-left
+        color $color-black
+        ../-expanded &
+          display block
+        &-active
+          color inherit
+          display block
+          ../../-expanded &
+            display block
+      &-icon
+        display block !important
+        color $color-dark-gray
+        position absolute
+        right (20/16)rem
+        top (30/16)rem
+        transform translate(0, -50%)
+        transition-duration 0.3s
+        ../-expanded &
+          transform translate(0, -50%) rotate(-180deg)
+          color $color-primary
+    &-timeline
+      display block
+      white-space nowrap
+      transition-duration 0.3s
+      &-wrapper
+        overflow hidden
+        position relative
+      &-item
+        display inline-block
+        width 100%
+        white-space normal
+        margin 0
+        vertical-align top
+      &-arrow
+        &-left
+        &-right
+          display block
+          position absolute
+          top 50%
+          transform translate(0,-50%)
+          color $color-white
+          font-size (22/16)rem !important
+          opacity 0.5
+          z-index 2
+          i
+            margin-left 0 !important
+        &-left
+          left (10/16)rem
+        &-right
+          right (10/16)rem
+    &-grid
+      display block
+      white-space nowrap
+      transition-duration 0.3s
+      &-wrapper
+        width 100%
+        overflow hidden
+      &-item
+        display inline-block
+        width 100%
+        white-space normal
+        margin 0
+        vertical-align top
+    &-footer
+      &-button
+        width 100%
+
+@media (max-width: $max-smartphone-width)
+  .process
+    //

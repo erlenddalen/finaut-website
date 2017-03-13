@@ -1,0 +1,57 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.articles
+  {-section-width}
+  {-section-padding}
+  &-wrapper
+    background $color-gray
+  &-heading
+    {-section-heading}
+    margin-bottom (60/16)rem
+  &-grid
+    {-section-grid}
+    &-item
+      width 30%
+      text-decoration none
+      color $color-black
+      &-illustration
+        {-keep-ratio(220/130)}
+        margin-right (10/16)rem
+        background-size cover
+        background-position center center
+        background-repeat no-repeat
+      &-content
+        margin-top -(10/16)rem
+        margin-left (10/16)rem
+        background $color-white
+        padding (70/16)rem (30/16)rem (30/16)rem (30/16)rem
+        position relative
+        &:after
+          content ''
+          position absolute
+          left (30/16)rem
+          top (40/16)rem
+          width (50/16)rem
+          border-bottom 2px $color-primary solid
+      &-heading
+        margin-bottom (45/16)rem
+      &-date
+        {-section-subheading}
+        font-size (12/16)rem
+
+@media (max-width: $max-tablet-width)
+  .articles
+    //
+
+@media (max-width: $max-smartphone-height)
+  .articles
+    &-grid
+      flex-direction column
+      &-item
+        width 100%
+        margin-bottom (30/16)rem
+
+@media (max-width: $max-smartphone-width)
+  .articles
+    //

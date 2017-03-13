@@ -1,0 +1,70 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.intro
+  {-section-width}
+  box-sizing border-box
+  padding (200/16)rem 15%
+  &-wrapper
+    background $color-primary
+    color $color-white
+    background-image url('../images/intro/background.png')
+    background-position center center
+    background-size cover
+    background-repeat no-repeat
+  &-heading
+    {-section-heading}
+    font-size (80/16)rem
+    line-height (110/16)rem
+    text-align left
+    margin-bottom (10/16)rem
+    margin-left -(6/16)rem // compensates for the large font padding in glyph 'B'
+  &-subheading
+    width 75%
+    font-size (20/16)rem
+    line-height (25/16)rem
+    margin-bottom (40/16)rem
+  &-button
+    {-button}
+    background $color-secondary
+    color $color-white
+    font-size (14/16)rem
+    padding-left (35/16)rem
+    padding-right @padding-left
+    box-sizing border-box
+    white-space nowrap
+    &-secondary
+      background none
+      border 1px $color-secondary solid
+      padding-top (14/16)rem
+      padding-bottom @padding-top
+      padding-left (20/16)rem
+      padding-right @padding-left
+
+@media (max-width: $max-tablet-width)
+  .intro
+    //
+
+@media (max-width: $max-smartphone-height)
+  .intro
+    padding (60/16)rem 5%
+    text-align center
+    &-heading
+      font-size (65/16)rem
+      margin-bottom (30/16)rem
+    &-subheading
+      width auto
+      padding 0
+      text-align left
+      font-size (12/16)rem
+      line-height (16/16)rem
+    &-button
+      display block
+      margin 0 auto
+      width 80%
+      &-secondary
+        //
+
+@media (max-width: $max-smartphone-width)
+  .intro
+    //

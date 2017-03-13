@@ -1,0 +1,121 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.article
+  {-section-width}
+  padding-bottom (60/16)rem
+  &-wrapper
+    border-top $color-dark-gray 2px solid
+    padding-top (60/16)rem
+  &-heading
+    {-section-heading}
+    background $color-gray
+    position relative
+    padding (70/16)rem (60/16)rem (120/16)rem (60/16)rem
+    margin -(200/16)rem 7% (70/16)rem 7%
+    min-height (240/16)rem
+    text-align left
+    box-sizing border-box
+    position relative
+    &:after
+      content ''
+      position absolute
+      left (60/16)rem
+      bottom (60/16)rem
+      border 2px $color-primary solid
+      width (100/16)rem
+  &-illustration
+    {-keep-ratio(1000/700)}
+    background-size cover
+    background-position center center
+    background-repeat no-repeat
+  &-text
+    font-size (14/16)rem
+    line-height (20/16)rem
+    margin-left 12%
+    margin-right @margin-left
+    h2
+      {-section-subheading}
+      margin-bottom (30/16)rem
+    img
+      max-width 100%
+  &-related
+    {-section-width}
+    {-section-padding}
+    &-wrapper
+      background $color-gray
+    &-heading
+      {-section-subheading}
+      padding-bottom (30/16)rem
+      margin-bottom (60/16)rem
+      position relative
+      &:after
+        content ''
+        position absolute
+        left 0
+        bottom 0
+        border-bottom 2px $color-primary solid
+        width (50/16)rem
+    &-grid
+      {-section-grid}
+      &-item
+        width 30%
+        text-decoration none
+        color $color-black
+        &-illustration
+          {-keep-ratio(220/130)}
+          margin-right (10/16)rem
+          background-size cover
+          background-position center center
+          background-repeat no-repeat
+        &-content
+          margin-top -(10/16)rem
+          margin-left (10/16)rem
+          background $color-white
+          padding (70/16)rem (30/16)rem (30/16)rem (30/16)rem
+          position relative
+          &:after
+            content ''
+            position absolute
+            left (30/16)rem
+            top (40/16)rem
+            width (50/16)rem
+            border-bottom 2px $color-primary solid
+        &-heading
+          margin-bottom (45/16)rem
+        &-date
+          {-section-subheading}
+          font-size (12/16)rem
+
+@media (max-width: $max-tablet-width)
+  .article
+    //
+
+@media (max-width: $max-smartphone-height)
+  .article
+    &-wrapper
+      padding-top 0
+    &-illustration
+      margin-left  -(15/16)rem
+      margin-right -(15/16)rem
+    &-heading
+      margin -(60/16)rem 0 (40/16)rem 0
+      padding (20/16)rem (20/16)rem (60/16)rem (20/16)rem
+      min-height auto
+      &:after
+        left (20/16)rem
+        bottom (30/16)rem
+        // border 1px $color-primary solid
+    &-text
+      margin-left 0
+      margin-right @margin-left
+    &-related
+      &-grid
+        flex-direction column
+        &-item
+          width 100%
+          margin-bottom (30/16)rem
+
+@media (max-width: $max-smartphone-width)
+  .article
+    //

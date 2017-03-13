@@ -1,0 +1,177 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.menu
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  min-height 100vh
+  box-sizing border-box
+  z-index 3
+  &-collapsed
+    display none
+  &-social
+  &-login
+  &-language
+  &-search
+    display none
+  &-shade
+    background $color-white
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+  &-heading
+    {-section-subheading}
+    position absolute
+    top (30/16)rem
+    left (40/16)rem
+  &-close-control
+    position absolute
+    top (30/16)rem
+    right (40/16)rem
+    transform rotate(45deg)
+    background $color-gray
+    width (35/16)rem
+    height @width
+    line-height @height
+    text-align center
+    font-weight 100
+    font-size (20/16)rem
+    vertical-align top
+    transition-duration 0.3s
+    i:before
+      transform rotate(45deg)
+  &-list
+    position relative
+    margin (100/16)rem auto 0 auto
+    padding 0
+    width 50%
+    text-align left
+    list-style none
+  &-link
+    display block
+    font-size (45/16)rem
+    font-weight 300
+    line-height (80/16)rem
+    text-decoration none
+    color $color-black
+    position relative
+    &-active
+      color $color-primary
+      &:after
+      ../:hover:after
+        content ''
+        display block
+        position absolute
+        left 0
+        bottom 0
+        width 20%
+        border-bottom 2px $color-primary solid
+
+@media (max-width: $max-tablet-width)
+  .menu
+    padding-top (70/16)rem
+    position absolute
+    &-shade
+      position fixed
+    &-close-control
+      right (15/16)rem
+    &-heading
+      left (15/16)rem
+    &-list
+      width 100%
+      margin 0 (15/16)rem
+      padding 0
+    &-link
+      font-size (30/16)rem
+    &-login
+      {-section-subheading}
+      {-hover-transform($color-primary)}
+      display block
+      width 100%
+      text-align center
+      position relative
+      color inherit
+      text-decoration none
+      white-space nowrap
+      padding (20/16)rem 0
+      border-top $color-dark-gray 1px solid
+      &-text
+        display inline-block
+      &-icon
+        margin-right (5/16)rem
+        transition-duration 0.3s
+        color $color-black-semi
+    &-language
+      {-section-subheading}
+      {-hover-transform($color-primary)}
+      display block
+      width 100%
+      text-align center
+      padding (20/16)rem 0
+      border-top $color-dark-gray 1px solid
+      border-bottom @border-top
+      position relative
+      color inherit
+      text-decoration none
+      white-space nowrap
+      &-icon
+        margin-right (5/16)rem
+        color $color-black-semi
+    &-search
+      display block
+      position relative
+      margin (30/16)rem (15/16)rem
+      box-sizing border-box
+      &-form
+        position relative
+      &-field
+        {-section-subheading}
+        border none
+        border-bottom 2px $color-primary solid
+        padding 0 (25/16)rem 0 0
+        outline none
+        box-sizing border-box
+        width 100%
+        margin 0 auto
+        height (40/16)rem
+      &-button
+        width (20/16)rem
+        height @width
+        border none
+        background none
+        margin 0
+        margin-left -@width
+        padding 0
+        vertical-align middle
+        outline none
+        &-icon
+          color $color-black-semi
+          vertical-align top !important
+          margin-left 0 !important
+    &-social
+      display block
+      position relative
+      white-space nowrap
+      width 100%
+      text-align center
+      margin (30/16)rem 0
+      &-icon
+        {-hover-transform($color-primary)}
+        display inline-block
+        padding (15/16)rem
+        font-size (30/16)rem
+        color $color-black-semi
+
+
+@media (max-width: $max-smartphone-height)
+  .menu
+    //
+
+@media (max-width: $max-smartphone-width)
+  .menu
+    //

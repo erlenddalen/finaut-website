@@ -1,0 +1,48 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.advantages
+  {-section-width}
+  {-section-padding}
+  &-wrapper
+    background $color-gray
+    color $color-black
+  &-heading
+    {-section-heading}
+    margin-bottom (60/16)rem
+  &-grid
+    {-section-grid}
+    flex-wrap wrap
+    &-item
+      width 30%
+      box-sizing border-box
+      padding-top (15/16)rem
+      padding-left (65/16)rem
+      margin-bottom (45/16)rem
+      position relative
+      &-icon
+        color $color-primary
+        font-size (40/16)rem
+        position absolute
+        left (10/16)rem
+        top 0
+      &-heading
+        {-section-subheading}
+        margin-bottom (30/16)rem
+      &-intro
+        {-font-regular}
+
+@media (max-width: $max-tablet-width)
+  .advantages
+    //
+
+@media (max-width: $max-smartphone-height)
+  .advantages
+    &-grid
+      flex-direction column
+      &-item
+        width 100%
+
+@media (max-width: $max-smartphone-width)
+  .advantages
+    //

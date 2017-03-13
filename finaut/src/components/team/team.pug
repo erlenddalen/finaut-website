@@ -1,0 +1,44 @@
+.team-wrapper
+  section.team
+    h2.team-heading
+      | Our team
+    form(action="#" method="get").team-filter-form
+      .team-filter-field-wrapper
+        input(type="text" placeholder="Start typing a name").team-filter-field
+        button(type="submit").team-filter-button
+          i.team-filter-button-icon.finaut-icon-search
+    .team-grid
+      a(href="#").team-navigation-left.finaut-icon-arrow-left
+      a(href="#").team-navigation-right.finaut-icon-arrow-right
+      .team-grid-item
+        .team-grid-item-illustration(style="background-image: url('http://lorempixel.com/315/390/people/6')")
+        .team-grid-item-name
+          | Johan Johansen
+        .team-grid-item-position
+          | CEO
+        .team-grid-item-intro
+          | bio, email, phone etc.
+      .team-grid-item
+        .team-grid-item-illustration(style="background-image: url('http://lorempixel.com/315/390/people/7')")
+        .team-grid-item-name
+          | Lars Hilsen
+        .team-grid-item-position
+          | Financial director
+        .team-grid-item-intro
+          | bio, email, phone etc.
+      .team-grid-item
+        .team-grid-item-illustration(style="background-image: url('http://lorempixel.com/315/390/people/9')")
+        .team-grid-item-name
+          | Sandra Vaughan
+        .team-grid-item-position
+          | Human Resources
+        .team-grid-item-intro
+          | bio, email, phone etc.
+    .team-navigation
+      a(href="").team-navigation-item.team-navigation-item-active
+      a(href="").team-navigation-item
+      a(href="").team-navigation-item
+    .team-footer
+      a(href="#").team-footer-button
+        | Show more
+        i.finaut-icon-plus.team-footer-button-icon

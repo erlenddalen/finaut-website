@@ -1,0 +1,26 @@
+.header-wrapper
+  section.header
+    a(href="index.html" style="background-image: url('images/header/logo.png')" title="Finansnæringens autorisasjonsordninger").header-logo
+    .header-social
+      a(href="#").header-social-icon
+        i.ion-social-facebook
+      a(href="#").header-social-icon
+        i.ion-social-linkedin
+      a(href="#").header-social-icon
+        i.ion-social-twitter
+    a(href="#").header-login
+      i.header-login-icon.finaut-icon-user
+      .header-login-text
+        | Log in
+    a(href="#").header-language
+      i.header-language-icon.finaut-icon-arrow-down
+      | EN
+    .header-search
+      form(action="search.html" method="post").header-search-form
+        input(type="text" placeholder="search").header-search-field
+        button.header-search-button
+          i.header-search-button-icon.finaut-icon-search
+    .header-menu
+      a(href="#").header-menu-icon.js-menu-expand-control
+        i.ion-navicon
+      include ../menu/menu.pug

@@ -1,0 +1,85 @@
+@require "../../shared/stylus/includes/variables.styl"
+@require "../../shared/stylus/includes/mixins.styl"
+
+.trust
+  {-section-width}
+  {-section-padding}
+  &-wrapper
+    background $color-gray
+  &-heading
+    {-section-heading}
+    margin-bottom (60/16)rem
+  &-grid
+    {-section-grid}
+    &-item
+      width 30%
+      display block
+      text-decoration none
+      color $color-black
+      position relative
+
+      $duration = 0.3s
+      &-heading
+        {-section-subheading}
+        line-height (20/16)rem
+        padding (25/16)rem
+        background $color-white
+        transition-duration $duration
+        position relative
+        ../:hover &
+          margin-top -100%
+          &:after
+            content ''
+            position absolute
+            left 0
+            bottom 0
+            width 30%
+            border-bottom 2px solid $color-primary
+      &-illustration
+        {-keep-ratio(300/300)}
+        background-size cover
+        background-position center center
+        background-repeat no-repeat
+        transition-duration $duration
+        position relative
+        &:after
+          content ''
+          background #fff
+          position absolute
+          top 0
+          left 0
+          bottom 0
+          right 0
+          opacity 0
+          transition-duration $duration
+        ../:hover &:after
+            opacity 1
+      &-intro
+        transition-duration $duration
+        background #fff
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        padding (20/16)rem (25/16)rem
+        opacity 0
+        ../:hover &
+          opacity 1
+
+@media (max-width: $max-tablet-width)
+  .trust
+    //
+
+@media (max-width: $max-smartphone-height)
+  .trust
+    &-heading
+      margin-bottom (50/16)rem
+    &-grid
+      flex-direction column
+      &-item
+        width 100%
+        margin-bottom (20/16)rem
+
+@media (max-width: $max-smartphone-width)
+  .trust
+    //

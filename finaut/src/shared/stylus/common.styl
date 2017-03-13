@@ -1,0 +1,39 @@
+@import 'includes/variables.styl'
+@import 'includes/mixins.styl'
+
+html
+body
+  padding 0
+  margin 0
+
+body
+  font-family 'Lato', sans-serif
+  -webkit-font-smoothing antialiased
+
+input
+textarea
+select
+  font-family 'Lato', sans-serif
+  outline-color lightness($color-primary, 70%)
+
+[class^="finaut-icon-"]
+[class*=" finaut-icon-"]
+  display inline-block
+  line-height (20/16)rem
+  font-size 112.5%
+  margin-left (5/16)rem
+  vertical-align middle
+  &:before
+    display inline-block
+    line-height (20/16)rem
+
+@media (max-width: $max-tabled-width)
+  //
+
+@media (max-width: $max-smartphone-height)
+  html
+  body
+    min-width 320px
+
+@media (max-width: $max-smartphone-width)
+  //
